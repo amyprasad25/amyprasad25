@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src= "https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>  
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="pics/logo.png" class= "logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Portfolio </p>
+            <h1>Hi I'm Amy Prasad!</h1>
+        </div>
+    </div>
+</div>
+<!------------about------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pics/user.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi my name is Amy Prasad, I am a third year student at New Jersey Institute of technology and I am pursuing a degree in Fintech and a minor in Data Analytics. I am currently in search of an internship, Co-Op, or research opportunity that will allow me to utilize my problem solving skills to further pursue my career. I am a curious and dedicated student who possesses excellent communication skills, this allows me to both lead and be a team player. I am very eager to learn more and apply my current skills to further develop my knowledge in Artificial Intelligence and Machine Learning. 
+                </p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                
+                
+               
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Admin Manager</span><br>  Internship| Quality Assurance Engineer January 2024 - April 2024 <br>-Oversaw day-to-day operations of the dance school, including scheduling classes, managing registrations, and handling inquiries from students and parents.
+                            <br>-Implemented new administrative procedures, resulting in a 20% increase in efficiency and a 15% reduction in administrative errors.
+                            <br>-Collaborated with instructors to coordinate performances and events, ensuring seamless execution and positive experiences.
+                            <br>-Developed relationships with vendors and suppliers, negotiating contracts and managing inventory to meet the needs of the school.
+                            Implemented marketing strategies to promote the school's programs and events, utilizing social media, email campaigns, and community outreach initiatives.
+                        <li><span>Quality Assurance Engineer</span><br> Internship January 2024 - April 2024 <br>-Conducted over 100 functional, integration, regression, and performance testing on software applications to ensure compliance with quality standards and user requirements.
+                            <br>-Identified, documented, and tracked software defects using bug tracking system JIRA, leading to 20% decrease in bug resolution time 
+                            <br>-Worked with software developers and  product managers to understand project requirements and provide input to improve overall software quality.
+                                </li>
+                        <li><span>Teacher</span><br>  Tech Program May 2021 - December 2023 <br>-Designed and implemented an engaging coding curriculum covering a variety of programming languages and concepts, including Java, Python, HTML, CSS, JavaScript, and ScratchCreating games, website development, building personal portfolios, teaching  AI, exploring python programming, learning Java. 
+                            <br>-Instructed students on building personal websites and portfolios, emphasizing foundational web technologies (HTML, CSS, JavaScript) and best practices in design and usability.
+                             <br>-Fostered a supportive learning environment by encouraging older students to mentor younger peers, enhancing leadership skills and reinforcing knowledge.
+                            </li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br>My frist language I learned. Created a simple project to practice my skills.</li>
+                        <li><span>Website Development</span><br>Developed a personal portfolio through the use of HTML, CSS, Javascript.</li>
+                        <li><span>Java</span><br>Created a game with my class. Utilized Gamemaker to create simple game.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>Expected to Graduate: December 2025<br>New Jersey Institute of Technology <br><br> Bachelor of Science in <span>Financial Technology</span> with minor in <span>Data analytics</span> <br><br>Affiliations: SHPE, NSBE, Habitat for Humanity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------services------------------------------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+             <div>
+                <i class= "fab fa-app-store"></i>
+                <h2>Web Design</h2>
+                <p>HTML, JS, CSS</p>
+                <a href="#">Learn more</a>
+
+             </div>
+             <div>
+                <i class= "fas fa-crop-alt"></i>
+                <h2>Graphic Design</h2>
+                <p>HTML, JS, CSS</p>
+                <a href="#">Learn more</a>
+
+             </div>
+             <div>
+                <i class= "fas fa-code"></i>
+                <h2>Programming </h2>
+                <p>HTML, JS, CSS</p>
+                <a href="#">Learn more</a>
+
+             </div>
+        </div>
+    </div>
+</div>
+<!----contact------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class=""></h1>
+            </div>
+            <div class="contact-right"></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
+
